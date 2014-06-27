@@ -2,7 +2,7 @@
 
 <p>
   <strong>User:</strong>
-  <%= @rsvp.user_id %>
+  <%= @rsvp.guest_id %>
 </p>
 
 <p>
@@ -15,5 +15,5 @@
   <%= @rsvp.answer %>
 </p>
 
-<%= link_to 'Edit', edit_rsvp_path(@rsvp) %> |
-<%= link_to 'Back', rsvps_path %>
+<%= link_to 'Back', rsvps_path, :type => "button", :class => "btn btn-danger" %> |
+<%= link_to 'Edit', edit_rsvp_path(@rsvp), :type => "button", :class => "btn btn-primary" %>

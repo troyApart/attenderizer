@@ -6,9 +6,9 @@
 </p>
 
 <p>
-  <strong>Phonenumber:</strong>
+  <strong>Phone Number:</strong>
   <%= @guest.phonenumber %>
 </p>
 
-<%= link_to 'Edit', edit_guest_path(@guest) %> |
-<%= link_to 'Back', guests_path %>
+<%= link_to 'Back', guests_path, :type => "button", :class => "btn btn-danger" %> |
+<%= link_to 'Edit', edit_guest_path(@guest), :type => "button", :class => "btn btn-primary" %>

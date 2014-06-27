@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626202021) do
+ActiveRecord::Schema.define(version: 20140627010800) do
 
   create_table "events", force: true do |t|
     t.text     "details"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20140626202021) do
     t.datetime "time_for_first_send"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "userid"
   end
 
   create_table "guests", force: true do |t|
@@ -34,6 +35,13 @@ ActiveRecord::Schema.define(version: 20140626202021) do
     t.integer  "guest_id"
     t.integer  "event_id"
     t.boolean  "answer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "phonenumber"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

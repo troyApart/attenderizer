@@ -1,6 +1,6 @@
 <h1>Listing events</h1>
 
-<table>
+<table align="center">
   <thead>
     <tr>
       <th>Details</th>
@@ -20,9 +20,9 @@
         <td><%= event.time_interval %></td>
         <td><%= event.time_of_last_send %></td>
         <td><%= event.time_for_first_send %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>&nbsp;<%= link_to '', event, :class => "fa fa-eye", :style => "color:blue;" %>&nbsp;</td>
+        <td><%= link_to '', edit_event_path(event), :class => "fa fa-edit", :style => "color:blue;" %>&nbsp;</td>
+        <td><%= link_to '', event, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fa fa-trash-o", :style => "color:red;" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,7 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'Logout', root_path, :type => "button", :class => "btn btn-danger" %> |
+<%= link_to 'New Event', new_event_path, :type => "button", :class => "btn btn-primary" %> |
+<%= link_to 'Guests', guests_path, :type => "button", :class => "btn btn-primary" %>
+

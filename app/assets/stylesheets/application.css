@@ -12,4 +12,18 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+
+
+body {
+	font-family: sans-serif;
+	text-align: center;
+	
+}
+
+select.datetime-select {
+    width:auto;
+    border: 1px solid #cccccc;
+    background-color: #ffffff;
+}

@@ -1,6 +1,6 @@
 <h1>Listing guests</h1>
 
-<table>
+<table align="center">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= guest.name %></td>
         <td><%= guest.phonenumber %></td>
-        <td><%= link_to 'Show', guest %></td>
-        <td><%= link_to 'Edit', edit_guest_path(guest) %></td>
-        <td><%= link_to 'Destroy', guest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>&nbsp;<%= link_to '', guest, :class => "fa fa-eye", :style => "color:blue;" %>&nbsp;</td>
+        <td><%= link_to '', edit_guest_path(guest), :class => "fa fa-edit", :style => "color:blue;" %>&nbsp;</td>
+        <td><%= link_to '', guest, method: :delete, data: { confirm: 'Are you sure?' }, :class => "fa fa-trash-o", :style => "color:red;" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,7 @@
 
 <br>
 
-<%= link_to 'New Guest', new_guest_path %>
+
+<%= link_to 'Logout', root_path, :type => "button", :class => "btn btn-danger" %> |
+<%= link_to 'New Guest', new_guest_path, :type => "button", :class => "btn btn-primary" %> |
+<%= link_to 'Add Events', events_path, :type => "button", :class => "btn btn-primary" %>

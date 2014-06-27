@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Phone Number:</strong>
+  <%= @user.phonenumber %>
+</p>
+
+<%= link_to 'Back', users_path, :type => "button", :class => "btn btn-danger" %> |
+<%= link_to 'Edit', edit_user_path(@user), :type => "button", :class => "btn btn-primary" %> |
+<%= link_to 'Add Guests', guests_path(@guest), :type => "button", :class => "btn btn-primary" %> |
+<%= link_to 'Add Events', events_path(@event), :type => "button", :class => "btn btn-primary" %>
