@@ -1,6 +1,26 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  def isAttending(guest_id)
+    rsvps = Rsvp.all
+    rsvps.each do |rsvp|
+      if guest_id == rsvp.guest_id
+        if rsvp.answer != nil
+          if rsvp.answer == true
+            return true
+          else
+            return false
+          end
+        else
+          return nil
+        end
+      else
+        return "not found"
+      end
+    end
+  end
+  helper_method :isAttending
+
   # GET /events
   # GET /events.json
   def index

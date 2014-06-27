@@ -25,24 +25,37 @@
   <%= @event.time_for_first_send %>
 </p>
 
-<div class="guests"></div>
+<div class="guests">
 <table align="center">
     <thead>
     <tr>
         <th>Name</th>
         <th>Phone</th>
-        <th colspan="3"></th>
+        <th>Attending?</th>
     </tr>
     </thead>
     <% @guests.each do |guest| %>
+    <% r = isAttending(guest.id) %>
         <tr>
             <td><%= guest.name %></td>
             <td><%= guest.phonenumber %></td>
+            <% if r != nil %>
+              <% if r == true %>
+              <td><%= "yes" %></td>
+              <% else%>
+              <td><%= "no" %></td>
+              <% end %>
+            <% else %>
+            <td><%= "--" %></td>
+            <% end %>
         </tr>
+        
+
     <% end %>
 </table>
 </div>
 
+<br>
 <%= link_to 'Back', events_path, :type => "button", :class => "btn btn-danger" %> |
 <%= link_to 'Edit', edit_event_path(@event), :type => "button", :class => "btn btn-primary" %>
 

@@ -1,4 +1,4 @@
-<h1>Listing guests</h1>
+<h1 class="page-header">Guest Archive</h1>
 
 <table align="center">
   <thead>
@@ -23,8 +23,7 @@
 </table>
 
 <br>
-
-
+<%= link_to 'New Guest', new_guest_path, :type => "button", :class => "btn btn-primary" %>
+<br><br>
 <%= link_to 'Logout', root_path, :type => "button", :class => "btn btn-danger" %> |
-<%= link_to 'New Guest', new_guest_path, :type => "button", :class => "btn btn-primary" %> |
 <%= link_to 'Add Events', events_path, :type => "button", :class => "btn btn-primary" %>

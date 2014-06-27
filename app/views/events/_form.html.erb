@@ -11,25 +11,25 @@
         </div>
     <% end %>
     <div class="field">
-        <%= f.label :details %>
+        <%= f.label :details %>:
         <%= f.text_area :details %>
     </div>
-    <br/>
+    <br>
     <div class="field">
-        <%= f.label :date %>
+        <%= f.label :date %>:
         <%= f.datetime_select(:date, options = { order: [:month, :day, :year, :hour, :minute], start_year: 2014 }, {:class => 'datetime-select'}) %>
     </div>
-    <br/>
+    <br>
     <div class="field">
-        <%= f.label "How often to remind guests (in seconds!)" %>
+        <%= f.label "How often to remind guests (in seconds!)" %>:
         <%= f.number_field :time_interval %>
     </div>
-    <br/>
+    <br>
     <div class="field">
-        <%= f.label :time_for_first_send %>
-        <%= f.datetime_select(:date, options = { order: [:month, :day, :year, :hour, :minute], start_year: 2014 }, {:class => 'datetime-select'}) %>
+        <%= f.label :time_for_first_send %>:
+        <%= f.datetime_select(:time_for_first_send, options = { order: [:month, :day, :year, :hour, :minute], start_year: 2014 }, {:class => 'datetime-select'}) %>
     </div>
-    <br/>
+    <br>
     <div class="guests">
     <table align="center">
         <thead>

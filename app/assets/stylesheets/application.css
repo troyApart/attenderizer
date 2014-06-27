@@ -17,13 +17,20 @@
 
 
 body {
+	margin-top: 50px;
 	font-family: sans-serif;
 	text-align: center;
-	
 }
 
 select.datetime-select {
     width:auto;
     border: 1px solid #cccccc;
     background-color: #ffffff;
+}
+div.container {
+	padding-bottom: 10px;
+	width:auto, 0px;
+    border: 1px solid #cccccc;
+    background-color: #eeeeee;
+    box-shadow: 5px 5px 5px #888;	
 }
